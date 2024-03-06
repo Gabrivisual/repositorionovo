@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* root é a var do css. basicamente o que acontece aqui utilizado no restante do arquivo*/
+:root{
+    --main-color: #F8F8F8;
+    --site-color:#333333;
+    --active-color:#DAA520;
+    --first-color: #E5E5E5;
+    --second-color: #001F3F;
+    --Third-color: #800000;
+    --font-family:"Old London";
+}
+body{
+    background-color: var(--site-color);
+    color: var(--site-color);
+    font-family:var(--font-family);
+    margin: 0;
+}
+@import url(https://db.onlinewebfonts.com/c/95b505026728bca7b241bd68c6b5bd4e?family=Old+London);
+.navbar{
+    position: fixed;
+    
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    padding: 20px 0;
+    font-family:var(--font-family);
+    background-color: var(--second-color);
+    border-bottom: var(--Third-color) 1px;
+   
+   
+   
+    
+}
+.max-width{
+    max-width: 1800px;
+    padding: 0 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar .logo a{
+    color: var(--active-color);
+    font-size: 35px;
+    font-weight: 500;
+
+    
+}
+.navbar .menu li{ 
+    display: inline-block;
+    justify-content: center;
+   
+}
+.navbar .menu li a{
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 50px;
+}
+/* smartphone */
+.menu-btn{
+    color:var(--main-color);
+    font-size: 23px;
+    display: none;
+    cursor: pointer;
+}
+/* @media serve para ser responsivo ao tamanho da tela */
+@media(max-width:450px){
+    .menu-btn{
+    display: block;
+    z-index: 999;
+    
+    }
+    #menu-icon.active::before{
+        content: "\f00d";
+    }
+
+    .navbar .menu{
+        background-color: var(--active-color);
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top:0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    #menu-site.active{
+        left:0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 13px 0;
+        font-size: 25px;
+
+    }
+}
+/* FIM DO CABEÇALHO */
+/* inicio DO TOPO */
+section{
+padding: 50px 0;
+
+}
+@media(max-width:690px){
+    section{
+        padding: 20px 0; 
+        
+    };
+
+}
+    .todos-projetos{
+        background-color: var(--first-color);
+        padding: 100px 50px;
+    }
+    .todos-projetos .max-width-todos{
+        width: 100%;
+        width: 1800PX;
+        margin-top: 50px
+        
+        
+    }
+    .todos-projetos .todos{
+        font-size: 35px;
+        font-family: var(--font-family);
+        color: var(--second-color);
+      justify-content: center;
+      display: flex;
+    }
+    @media(max-width:450px){
+        .todos-projetos{
+            padding: 50px 30px;
+        }
+        .todos-projetos .max-width-todos{
+            width: auto;
+        }
+        .todos-projetos .todos{
+            font-size: 20px;
+
+        }
+    }
+
+    .projetos{
+        background-color:var(--main-color);
+        visibility:hidden ;
+        
+    }
+    
+    .projetos .projetos-width {
+        max-width:1800px;
+        max-height: 1800;
+        padding: 0x 10px;
+        margin: auto;
+     
+    }
+    .projetos .projetos-content{
+        display: flex; /*ok. alinha os itens de forma flexivel na div */
+        flex-wrap: wrap; 
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        height: 600px;
+        
+    }
+    .projetos .projetos-content .bloco{
+        width: calc(33% - 20px);
+        background-color: var(--first-color);
+        text-align: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        height: 100%;
+        border: 3px solid var(--active-color);
+        border-radius: 6px;
+        
+        
+    }
+    .projetos .projetos-content .bloco:hover{
+        transform:rotate(3deg);
+      
+    }
+    .projetos .projetos-content .bloco img{
+        object-fit: fill;
+        height: 100%;
+        width: 100%;
+        
+    }
+    .projetos .projetos-content  .segundo img{
+        padding: 20px;
+    }
+    .projetos .projetos-content  .terceiro img{
+        object-fit: cover;
+    }
+    .projetos .projetos-content  .quarto img{
+        object-fit: cover;
+    }
+    .projetos .projetos-content  .sexto img{
+        object-fit: cover;
+    }
+    @media (max-width:450px){
+        .projetos .projetos-content{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            height: auto;
+            gap: 10px
+            
+           
+        }
+        .projetos .projetos-content .bloco{
+            width: 400px;
+            margin-bottom: 20px;
+        }
+        .projetos .projetos-content .bloco img{
+            object-fit: cover;
+            
+        }
+    }    
+    
+
+
+
+    footer{
+        background-color: var(--second-color);
+        padding: 25px 23px;
+        color: var(--first-color);
+        text-align: center;
+        font-family: 'Poppins',sans-serif;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+       
+    
+    }
+    footer span a{
+        color: var(--main-color);
+    }
+    footer span a:hover{
+        color: var(--active-color);
+    }

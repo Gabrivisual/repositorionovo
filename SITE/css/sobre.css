@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* root é a var do css. basicamente o que acontece aqui utilizado no restante do arquivo*/
+:root{
+    --main-color: #F8F8F8;
+    --site-color:#333333;
+    --active-color:#DAA520;
+    --first-color: #E5E5E5;
+    --second-color: #001F3F;
+    --Third-color: #800000;
+    --font-family:"Old London";
+}
+body{
+    background-color: var(--site-color);
+    color: var(--site-color);
+    font-family:var(--font-family);
+    margin: 0;
+}
+@import url(https://db.onlinewebfonts.com/c/95b505026728bca7b241bd68c6b5bd4e?family=Old+London);
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    padding: 20px 0;
+    font-family:var(--font-family);
+    background-color: var(--second-color);
+    border-bottom: var(--Third-color) 1px;
+   
+   
+   
+    
+}
+.max-width{
+    max-width: 1800px;
+    padding: 0 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar .logo a{
+    color: var(--active-color);
+    font-size: 35px;
+    font-weight: 500;
+
+    
+}
+.navbar .menu li{ 
+    display: inline-block;
+    justify-content: center;
+   
+}
+.navbar .menu li a{
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 50px;
+}
+/* smartphone */
+.menu-btn{
+    color:var(--main-color);
+    font-size: 23px;
+    display: none;
+    cursor: pointer;
+}
+/* @media serve para ser responsivo ao tamanho da tela */
+@media(max-width:450px){
+    .menu-btn{
+    display: block;
+    z-index: 999;
+    
+    }
+    #menu-icon.active::before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        background-color: var(--active-color);
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top:0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    #menu-site.active{
+        left:0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 13px 0;
+        font-size: 25px;
+
+    }
+}
+/* FIM DO CABEÇALHO */
+/* inicio DO TOPO */
+section{
+padding: 50px 0;
+
+}
+@media(max-width:690px){
+    section{
+        padding: 20px 0; 
+        
+    };
+
+}
+    .sobre{
+        padding: 20px 20px;
+        color: var(--site-color);
+        background-color: var(--site-color);
+        font-family: var(--font-family);
+        margin: 0 60px;
+        height: 1300px;
+    }
+    .sobre .max-width-sobre{
+        max-height: 665px;
+        max-width:1800px;
+        padding: 0 10px;
+        margin: 150px 60px;
+       
+    }
+    .sobre .sobre-content{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        padding: 50px;
+        
+       
+    }
+   .sobre .sobre-content .foto-content img{
+    width: 800px;
+    height: 900px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 50px;
+   }
+   .sobre .sobre-content .text-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .sobre .sobre-content  .text-content h2{
+    font-size: 50PX;
+    color:var(--active-color);
+    padding-bottom: 300px;
+    
+    
+   }
+   .sobre .sobre-content .text-content p{
+    padding: 20px 20px;
+    font-size: 25px;
+    color: var(--first-color);
+    text-align: justify;
+    line-height: 30px; 
+   
+   letter-spacing: 2px;
+   
+   }
+   @media(max-width:450px){
+    .sobre{
+        padding: 80px 0px;
+        width: 100%;
+        margin: 5px 5px;
+        
+        height: auto
+    }
+    .sobre .sobre-content{
+        display: inline-block;
+        padding: 0;
+    }
+    .sobre .max-width-sobre{
+        max-width: 450px;
+        width: 100%;
+        padding: 0 10px;
+        margin: 0px 0px;}
+    .sobre .sobre-content .text-content{
+    display: inline-block; 
+    justify-items: center;
+    }
+    .sobre .sobre-content  .text-content h2{
+        font-size: 20PX;
+        color:var(--active-color);
+        padding: 20px 20px;
+       align-content: center;
+       }
+    .sobre .sobre-content .foto-content img{
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+       
+        object-fit: fill;
+       
+       
+    }
+    .sobre .sobre-content .text-content p{
+        padding: 0px 0px;
+        font-size: 15px;
+        color: var(--first-color);
+        text-align: justify;
+        line-height: 20px; 
+       
+       letter-spacing: 1px;
+       
+       }
+
+   }
+ 
+   
+   
+  
+   /*  fim primeira aba */
+
+
+.serviços{
+    padding: 20px 20px;
+    color: var(--second-color);
+    background-color: var(--main-color);
+    font-family: var(--font-family);
+    height: 1500px;
+}
+.serviços .max-width-serviços{
+    max-height: 665px;
+    max-width:1800px;
+    padding: 0 10px;
+    margin: 150px 60px;
+   
+}
+.serviços .serviços-content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 50px;
+    
+   
+}
+.serviços .serviços-content .foto-content img{
+width: 800px;
+height: 900px;
+object-fit: cover;
+object-position: 50% 50%;
+border-radius: 50px;
+}
+.serviços.serviços-content .text-content{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.serviços .serviços-content  .text-content h2{
+font-size: 50PX;
+color:var(--active-color);
+padding-bottom: 50px;
+padding-left:30px;
+
+
+}
+.serviços .serviços-content .text-content ul{
+
+margin: 20px 20px;
+padding-left:75px;
+font-size: 30px;
+color: var(--second-color);
+text-align:left;
+
+}
+.serviços .serviços-content .text-content ul li{
+margin-bottom: 80px;
+padding-left: 5px;
+list-style:none;
+font-family: 'Poppins',sans-serif;
+transition: all 0.5s ease-in-out;
+
+
+
+}
+.serviços .serviços-content .text-content ul li:hover{
+   cursor: pointer;
+    color: var(--active-color);
+}
+@media (max-width:450px) {
+    .serviços{
+        padding: 0;
+        height: auto;
+        width:100%
+    }
+    .serviços .max-width-serviços{
+        height: auto;
+        width: 100%;
+        width:100%;
+        display: flex;
+        margin:0px 0px;
+      
+    }
+    .serviços .serviços-content{
+        display: inline-block;
+        padding: 20px 0;
+    }
+    .serviços.serviços-content .text-content{
+        margin-bottom: 40px;
+        padding-bottom: 0px 200px;
+    
+    }
+    .serviços .serviços-content .foto-content img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .serviços .serviços-content .text-content ul{
+
+            margin: 10px 10px;
+            padding-left:0px;
+            font-size: 30px;
+            color: var(--second-color);
+            text-align:left;
+            
+    }
+    .serviços .serviços-content  .text-content h2{
+            font-size: 30PX;
+            color:var(--active-color);
+            padding-bottom: 20px;
+            padding-left:0px;
+            
+            
+    }
+    .serviços .serviços-content .text-content ul li{
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding-left: 5px;
+        list-style:none;
+        font-family: 'Poppins',sans-serif;
+        transition: all 0.5s ease-in-out;
+            
+    }
+
+}
+
+
+
+      
+    
+    /* fim das artes e inicio do roda pe */
+    footer{
+        background-color: var(--second-color);
+        padding: 25px 23px;
+        color: var(--first-color);
+        text-align: center;
+        font-family: 'Poppins',sans-serif;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+       
+    
+    }
+    footer span a{
+        color: var(--main-color);
+    }
+    footer span a:hover{
+        color: var(--active-color);
+    }

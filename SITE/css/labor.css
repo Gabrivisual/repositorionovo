@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://db.onlinewebfonts.com/c/5eb13044774c4be60bb45a735e933046?family=Crillee+Italic+BT');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+:root{
+    --main-color: #F8F8F8;
+    --site-color:#333333;
+    --active-color:#DAA520;
+    --first-color: #E5E5E5;
+    --second-color: #001F3F;
+    --Third-color: #800000;
+    --font-family:"Old London";
+}
+body{
+    background-color: var(--main-color);
+    color: var(--site-color);
+    font-family:var(--font-family);
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    padding: 20px 0;
+    --font-family:"Old London";
+    background-color: var(--second-color);
+    border-bottom: var(--Third-color) 1px;
+    text-decoration: none;
+   
+   
+    
+}
+.max-width{
+    max-width: 1800px;
+    padding: 0 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar .logo a{
+    color: var(--active-color);
+    font-size: 35px;
+    font-weight: 500;
+
+    
+}
+.navbar .menu li{ 
+    display: inline-block;
+    justify-content: center;
+   
+}
+.navbar .menu li a{
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 50px;
+}
+/* smartphone */
+.menu-btn{
+    color:var(--main-color);
+    font-size: 23px;
+    display: none;
+    cursor: pointer;
+}
+/* @media serve para ser responsivo ao tamanho da tela */
+@media(max-width:450px){
+    .menu-btn{
+    display: block;
+    z-index: 999;
+    
+    }
+    #menu-icon.active::before{
+        content: "\f00d";
+    }
+
+    .navbar .menu{
+        background-color: var(--active-color);
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top:0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    #menu-site.active{
+        left:0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 13px 0;
+        font-size: 25px;
+
+    }
+}
+section{
+padding: 50px 0;
+}
+@media(max-width:690px){
+    section{
+        padding: 20px 0;    
+}
+}
+.visual{
+    color: var(--first-color);
+    background-color: var(--site-color);
+    font-family: 'Poppins', sans-serif;
+    padding: 200px 0 ; 
+}
+.visual .max-widthvisual{
+    max-height: 3000px;
+    max-width:1500px;
+    padding: 0 10px;
+    margin: 60px 60px;
+}
+@import url(https://db.onlinewebfonts.com/c/32441506567156636049eb850b53f02a?family=Times+New+Roman);
+.visual .visual-content .title{
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    font-weight: 400;
+    font-size: 50px;
+    font-family: 'Times New Roman';
+}
+.visual .visual-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.visual .visual-content .right{
+    width: 50%;
+}
+.visual .visual-content .left{
+    width: 30%;
+}
+.visual .visual-content .right p{
+        text-align: justify;
+        font-size: 20px;
+}
+.visual .visual-content .left .bottom {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.imagem {
+ background-color: var(--main-color);
+ margin: 60px;
+ padding: 50px 300px;
+}
+.imagem .image-content img{
+    display: flex;
+    width:100%;
+    object-fit: fill;
+    align-items: center;
+    border-radius: 30px;
+}
+@media(max-width:450px){
+    .visual{
+        padding: 100px 0 ; 
+        width: 100%;
+    }
+    .visual .max-widthvisual{
+        max-width: 450px;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .visual .visual-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .visual .visual-content .right p{
+        text-align: justify;
+        font-size: 20px;
+        width: 100%;
+        padding: 0px;
+    }   
+    .visual .visual-content .right{
+        width: 100%;
+        margin: 0;
+    }
+    .visual .visual-content .title{
+        text-align: left;
+        font-size: 20px;    
+    }
+    .visual .visual-content .left {
+        width: 100%;
+       justify-content: center;
+       display: inline-block;
+    }
+  
+}
+@media(max-width:450px){
+    .imagem {
+        width: 100%;
+        padding: 10px 10px;
+        margin: 0;
+    }
+}
+footer{
+    background-color: var(--second-color);
+    padding: 25px 23px;
+    color: var(--first-color);
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+}
+footer span a{
+    color: var(--main-color);
+}
+footer span a:hover{
+    color: var(--active-color);
+}
