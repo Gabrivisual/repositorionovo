@@ -131,12 +131,7 @@ padding: 50px 0;
     background-attachment: fixed; 
     font-family:"Old London";
 }
-@media(max-width:450px){
-    .top{
-        background: none;
-        
-    }
-}
+
 .top .max-width2{
     width: 100%;
     display: flex;
